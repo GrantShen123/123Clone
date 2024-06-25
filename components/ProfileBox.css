@@ -15,7 +15,8 @@ html, body {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .top-third {
@@ -50,13 +51,49 @@ html, body {
 }
 
 .username {
-  margin-left: 5%;
+  margin-left: -12%;
   font-size: 70%;
   color: black;
-  position:relative;
-  top: -60px;
+  position:absolute;
+  margin-top: -38%;
 }
-.description {
+
+.profile-box .description {
+  opacity:0;
+  justify-content: center;
   font-size: 70%;
   margin-top: -10%; 
+  display: flex;
+  margin-left: -50%;
+  position:absolute;
+  text-align: center;
+  transition: all 0.5s ease-in;
+  transition: all 0.2s ease-out;
 }
+
+.profile-box:hover .description {
+  opacity:1;  
+  height: auto;
+}
+
+.profile-box:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+.profile-box .extra-info {
+  top:41%;
+  overflow: hidden;
+  transition:all 0.5s ease-in;
+  transition: all 0.2s ease-out;
+  opacity: 0;
+  position: absolute;
+  left: 70px;
+  font-size: 10px;
+  color: #637e63;
+}
+
+.profile-box:hover .extra-info {
+  opacity: 1;
+}
+
