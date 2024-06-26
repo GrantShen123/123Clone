@@ -14,7 +14,7 @@ interface ProfileBoxProps {
 
 const ProfileBox: React.FC<ProfileBoxProps> = ({ username, description, link, bannerLink, style, extraInfo }) => {
   const handleButtonClick = () => {
-    window.location.href = `/funky/${username}`;
+    window.location.href = `/${username}`;
   };
   return (
     <div className="container">
