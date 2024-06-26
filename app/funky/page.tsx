@@ -36,6 +36,7 @@ const App: React.FC = () => {
                 style={{ position: 'absolute', top: '50px', left: '430px' }} 
       />
         </div>
+        
     );
 };
 

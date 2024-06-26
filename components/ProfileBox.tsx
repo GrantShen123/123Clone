@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProfileBox.css';
+import { Button } from './button';
 
 interface ProfileBoxProps {
   username: string;
@@ -8,9 +9,13 @@ interface ProfileBoxProps {
   bannerLink: string;
   style?: React.CSSProperties;
   extraInfo: string;
+  onHover?: () => void;
 }
 
 const ProfileBox: React.FC<ProfileBoxProps> = ({ username, description, link, bannerLink, style, extraInfo }) => {
+  const handleButtonClick = () => {
+    window.location.href = `/funky/${username}`;
+  };
   return (
     <div className="container">
       <div className="profile-box" style={style}>
@@ -30,6 +35,7 @@ const ProfileBox: React.FC<ProfileBoxProps> = ({ username, description, link, ba
               </div>
             </div>
             <p className="description">{description}</p>
+            <Button onClick={handleButtonClick} className="profile-button">View Profile</Button>
             <p className="extra-info">{extraInfo}</p>
           </div>
         </div>
