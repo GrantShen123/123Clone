@@ -1,0 +1,49 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c44545;
+  min-height: 100vh;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -75px;
+  z-index: 1;
+  position: relative;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.username {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.handle {
+  font-size: 18px;
+  color: #666;
+}
+
+.description {
+  font-size: 16px;
+  color: #333;
+  max-width: 600px;
+  margin-top: 10px;
+}

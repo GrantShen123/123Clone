@@ -15,6 +15,9 @@ interface ProfileBoxProps {
 const ProfileBox: React.FC<ProfileBoxProps> = ({ username, description, link, bannerLink, style, extraInfo }) => {
   const handleButtonClick = () => {
     window.location.href = `/${username}`;
+  };  
+  const handleVerifButtonClick = () => {
+    window.location.href = `/${username}/Verif`;
   };
   return (
     <div className="container">
@@ -35,12 +38,15 @@ const ProfileBox: React.FC<ProfileBoxProps> = ({ username, description, link, ba
               </div>
             </div>
             <p className="description">{description}</p>
+            <div className="button-container">
             <Button onClick={handleButtonClick} className="profile-button">View Profile</Button>
+            <Button onClick={handleVerifButtonClick} className="verif-button">Verify</Button>
             <p className="extra-info">{extraInfo}</p>
           </div>
         </div>
       </div>
     </div>
+    </div>  
   );
 };
 
